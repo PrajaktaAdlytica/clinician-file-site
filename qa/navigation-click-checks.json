@@ -1,0 +1,74 @@
+[
+  {
+    "target": "product.html",
+    "actual": "product.html"
+  },
+  {
+    "target": "credential-desk.html",
+    "actual": "credential-desk.html"
+  },
+  {
+    "target": "credential-review.html",
+    "actual": "credential-review.html"
+  },
+  {
+    "target": "credential-proof.html",
+    "actual": "credential-proof.html"
+  },
+  {
+    "target": "credential-signal.html",
+    "actual": "credential-signal.html"
+  },
+  {
+    "target": "credential-report.html",
+    "actual": "credential-report.html"
+  },
+  {
+    "target": "use-cases.html",
+    "actual": "use-cases.html"
+  },
+  {
+    "target": "about.html",
+    "actual": "about.html"
+  },
+  {
+    "target": "pricing.html",
+    "actual": "pricing.html"
+  },
+  {
+    "target": "governance.html",
+    "actual": "governance.html"
+  },
+  {
+    "target": "contact.html",
+    "actual": "contact.html"
+  },
+  {
+    "target": "privacy.html",
+    "actual": "privacy.html"
+  },
+  {
+    "target": "terms.html",
+    "actual": "terms.html"
+  },
+  {
+    "target": "storyboard.html",
+    "actual": "storyboard.html"
+  },
+  {
+    "target": "brief-coverage.html",
+    "actual": "brief-coverage.html"
+  },
+  {
+    "target": "404.html",
+    "actual": "404.html"
+  },
+  {
+    "target": "signin.html",
+    "actual": "signin.html"
+  },
+  {
+    "target": "demo.html#queue",
+    "actual": "demo.html#queue"
+  }
+]

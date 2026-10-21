@@ -1,0 +1,266 @@
+{
+  "$description": "ClinicianFile Source Stitch v1. CSS tokens are the source of truth. Dimension and shadow values use CSS syntax.",
+  "tokens": {
+    "ivory": {
+      "$type": "color",
+      "$value": "#f5f1e8"
+    },
+    "paper": {
+      "$type": "color",
+      "$value": "#fbf9f4"
+    },
+    "vellum": {
+      "$type": "color",
+      "$value": "#f0ede5"
+    },
+    "forest": {
+      "$type": "color",
+      "$value": "#193a2e"
+    },
+    "forest-hover": {
+      "$type": "color",
+      "$value": "#254e3e"
+    },
+    "forest-pressed": {
+      "$type": "color",
+      "$value": "#102b21"
+    },
+    "ink": {
+      "$type": "color",
+      "$value": "#20251f"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#5f665d"
+    },
+    "subtle": {
+      "$type": "color",
+      "$value": "#777c72"
+    },
+    "line": {
+      "$type": "color",
+      "$value": "#d7d9cd"
+    },
+    "input-line": {
+      "$type": "color",
+      "$value": "#858d7d"
+    },
+    "olive": {
+      "$type": "color",
+      "$value": "#5c6148"
+    },
+    "brass": {
+      "$type": "color",
+      "$value": "#8c7546"
+    },
+    "success": {
+      "$type": "color",
+      "$value": "#315f46"
+    },
+    "success-bg": {
+      "$type": "color",
+      "$value": "#e8efe5"
+    },
+    "warning": {
+      "$type": "color",
+      "$value": "#80500f"
+    },
+    "warning-bg": {
+      "$type": "color",
+      "$value": "#f5ead4"
+    },
+    "error": {
+      "$type": "color",
+      "$value": "#953f2e"
+    },
+    "error-bg": {
+      "$type": "color",
+      "$value": "#f6e8e2"
+    },
+    "info": {
+      "$type": "color",
+      "$value": "#3c5b65"
+    },
+    "info-bg": {
+      "$type": "color",
+      "$value": "#e5edf0"
+    },
+    "neutral": {
+      "$type": "color",
+      "$value": "#5b6259"
+    },
+    "neutral-bg": {
+      "$type": "color",
+      "$value": "#e9eae3"
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "#365f93"
+    },
+    "font-display": {
+      "$type": "fontFamily",
+      "$value": "\"Source Serif\",Georgia,serif"
+    },
+    "font-ui": {
+      "$type": "fontFamily",
+      "$value": "Inter,system-ui,sans-serif"
+    },
+    "text-xs": {
+      "$type": "dimension",
+      "$value": ".75rem"
+    },
+    "text-sm": {
+      "$type": "dimension",
+      "$value": ".875rem"
+    },
+    "text-base": {
+      "$type": "dimension",
+      "$value": "1rem"
+    },
+    "text-lead": {
+      "$type": "dimension",
+      "$value": "1.125rem"
+    },
+    "h1": {
+      "$type": "string",
+      "$value": "clamp(2.125rem,3.4vw,3rem)"
+    },
+    "h2": {
+      "$type": "string",
+      "$value": "clamp(1.75rem,2.7vw,2.25rem)"
+    },
+    "h3": {
+      "$type": "dimension",
+      "$value": "1.5rem"
+    },
+    "leading-body": {
+      "$type": "string",
+      "$value": "1.6"
+    },
+    "leading-heading": {
+      "$type": "string",
+      "$value": "1.12"
+    },
+    "space-1": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "space-2": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "space-3": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "space-4": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "space-5": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "space-6": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "space-8": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "space-10": {
+      "$type": "dimension",
+      "$value": "40px"
+    },
+    "space-12": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "space-16": {
+      "$type": "dimension",
+      "$value": "64px"
+    },
+    "space-20": {
+      "$type": "dimension",
+      "$value": "80px"
+    },
+    "space-24": {
+      "$type": "dimension",
+      "$value": "96px"
+    },
+    "radius-sm": {
+      "$type": "dimension",
+      "$value": "3px"
+    },
+    "radius-control": {
+      "$type": "dimension",
+      "$value": "5px"
+    },
+    "radius-panel": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "shadow-1": {
+      "$type": "string",
+      "$value": "0 2px 5px #20251f08,0 1px 2px #20251f0a"
+    },
+    "shadow-2": {
+      "$type": "string",
+      "$value": "0 8px 20px -8px #302f292b,0 2px 6px #302f290a"
+    },
+    "shadow-3": {
+      "$type": "string",
+      "$value": "0 22px 52px -18px #302f2940,0 4px 12px #302f2910"
+    },
+    "duration-fast": {
+      "$type": "dimension",
+      "$value": "140ms"
+    },
+    "duration-base": {
+      "$type": "dimension",
+      "$value": "220ms"
+    },
+    "duration-scene": {
+      "$type": "dimension",
+      "$value": "700ms"
+    },
+    "ease": {
+      "$type": "string",
+      "$value": "cubic-bezier(.22,1,.36,1)"
+    },
+    "control-height": {
+      "$type": "dimension",
+      "$value": "44px"
+    },
+    "content": {
+      "$type": "dimension",
+      "$value": "1200px"
+    },
+    "reading": {
+      "$type": "dimension",
+      "$value": "640px"
+    },
+    "gutter": {
+      "$type": "string",
+      "$value": "clamp(20px,4vw,64px)"
+    },
+    "section-gap": {
+      "$type": "string",
+      "$value": "clamp(56px,7vw,96px)"
+    }
+  },
+  "layout": {
+    "desktop": 1200,
+    "reading": 640,
+    "mobileGutter": 20,
+    "breakpoints": [
+      760,
+      1100
+    ],
+    "grid": {
+      "desktopColumns": 12,
+      "mobileColumns": 4
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@font-face{font-family:Source Serif;src:url("../assets/fonts/SourceSerif4.woff2") format("woff2");font-weight:200 900;font-display:swap}
+@font-face{font-family:Inter;src:url("../assets/fonts/Inter.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --cf-ivory:#f5f1e8;--cf-paper:#fbf9f4;--cf-vellum:#f0ede5;
+  --cf-forest:#193a2e;--cf-forest-hover:#254e3e;--cf-forest-pressed:#102b21;
+  --cf-ink:#20251f;--cf-muted:#5f665d;--cf-subtle:#777c72;
+  --cf-line:#d7d9cd;--cf-input-line:#858d7d;--cf-olive:#5c6148;--cf-brass:#8c7546;
+  --cf-success:#315f46;--cf-success-bg:#e8efe5;--cf-warning:#80500f;--cf-warning-bg:#f5ead4;
+  --cf-error:#953f2e;--cf-error-bg:#f6e8e2;--cf-info:#3c5b65;--cf-info-bg:#e5edf0;
+  --cf-neutral:#5b6259;--cf-neutral-bg:#e9eae3;--cf-focus:#365f93;
+  --cf-font-display:"Source Serif",Georgia,serif;--cf-font-ui:Inter,system-ui,sans-serif;
+  --cf-text-xs:.75rem;--cf-text-sm:.875rem;--cf-text-base:1rem;--cf-text-lead:1.125rem;
+  --cf-h1:clamp(2.125rem,3.4vw,3rem);--cf-h2:clamp(1.75rem,2.7vw,2.25rem);--cf-h3:1.5rem;
+  --cf-leading-body:1.6;--cf-leading-heading:1.12;
+  --cf-space-1:4px;--cf-space-2:8px;--cf-space-3:12px;--cf-space-4:16px;
+  --cf-space-5:20px;--cf-space-6:24px;--cf-space-8:32px;--cf-space-10:40px;
+  --cf-space-12:48px;--cf-space-16:64px;--cf-space-20:80px;--cf-space-24:96px;
+  --cf-radius-sm:3px;--cf-radius-control:5px;--cf-radius-panel:8px;
+  --cf-shadow-1:0 2px 5px #20251f08,0 1px 2px #20251f0a;
+  --cf-shadow-2:0 8px 20px -8px #302f292b,0 2px 6px #302f290a;
+  --cf-shadow-3:0 22px 52px -18px #302f2940,0 4px 12px #302f2910;
+  --cf-duration-fast:140ms;--cf-duration-base:220ms;--cf-duration-scene:700ms;
+  --cf-ease:cubic-bezier(.22,1,.36,1);
+  --cf-control-height:44px;--cf-content:1200px;--cf-reading:640px;
+  --cf-gutter:clamp(20px,4vw,64px);--cf-section-gap:clamp(56px,7vw,96px);
+}
+@media(prefers-reduced-motion:reduce){:root{--cf-duration-fast:0ms;--cf-duration-base:0ms;--cf-duration-scene:0ms}}

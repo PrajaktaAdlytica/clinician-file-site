@@ -1,0 +1,64 @@
+/* Cinematic layer: approved artwork and tokens remain unchanged. */
+body{background-color:#faf8f2}
+body::before{opacity:.24;z-index:-1;background-size:620px}
+.ambient-scene{position:fixed;inset:0;overflow:hidden;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 72% 20%,#fffefb 0,transparent 58%),radial-gradient(ellipse at 8% 85%,#e8e0cc66,transparent 58%)}
+.ambient-vellum{position:absolute;width:1300px;max-width:none;opacity:.18;will-change:transform}
+.ambient-one{top:-280px;right:-250px;transform:rotate(-16deg)}
+.ambient-two{bottom:-370px;left:-470px;transform:rotate(14deg);opacity:.13}
+.site-header{background:#faf8f2e8}
+.hero-sequence{position:relative;min-height:calc(100svh + 480px)}
+.hero{position:sticky;top:84px;height:calc(100svh - 84px);min-height:680px;max-height:920px;padding-top:60px;grid-template-rows:1fr auto;align-content:start}
+.hero-copy h1{font-size:46px;max-width:510px}
+.hero-copy .lead{font-size:17px}
+.hero-ledger{display:flex;gap:20px;max-width:380px;border-top:1px solid var(--cf-line);margin-top:32px;padding-top:17px}
+.hero-ledger>span{font-size:9px;color:var(--cf-muted);display:flex;flex-direction:column;gap:5px;flex:1}
+.hero-ledger b{font:450 19px var(--cf-font-display);color:var(--cf-forest)}
+.scroll-cue{margin-top:30px}
+.hero-art{margin-top:-40px;height:650px;perspective:1600px;isolation:isolate}
+.hero-object{width:660px;left:10px;transform-origin:50% 62%;will-change:transform,opacity}
+.art-notes{top:120px;gap:46px;will-change:transform,opacity}
+.art-notes span{background:#faf8f2b3}
+.record-index{position:absolute;top:0;left:22px;right:10px;display:flex;justify-content:space-between;color:var(--cf-muted);font-size:8px;letter-spacing:.12em;padding-bottom:14px;border-bottom:1px solid var(--cf-line)}
+.art-registration{position:absolute;top:48px;bottom:40px;left:20px;right:10px;border-left:1px solid #9e916a28;border-right:1px solid #9e916a28;pointer-events:none}
+.art-registration::before,.art-registration::after{content:'+';position:absolute;left:-4px;color:var(--cf-brass);font:400 12px var(--cf-font-ui)}
+.art-registration::before{top:0}.art-registration::after{bottom:0}
+.evidence-ticket{position:absolute;left:30px;top:420px;display:flex;gap:12px;align-items:flex-start;padding:15px 18px;background:#fffdf5e8;border:1px solid #b4a88466;box-shadow:0 8px 24px #5c614810;z-index:2;will-change:transform,opacity;max-width:205px}
+.evidence-ticket>.icon{width:16px;height:16px;color:var(--cf-brass);margin-top:3px}
+.evidence-ticket span{font-size:8px;color:var(--cf-muted);letter-spacing:.05em;text-transform:uppercase;display:block}
+.evidence-ticket strong{font:450 18px/1.6 var(--cf-font-display);display:block;color:var(--cf-forest)}
+.evidence-ticket small{font-size:9px;color:var(--cf-muted);display:block}
+.art-watermark{bottom:4px}
+.hero-passport-preview{position:absolute;z-index:3;top:85px;left:65px;right:0;max-width:520px;background:var(--cf-paper);border:1px solid #b2b397;border-left:10px solid var(--cf-olive);box-shadow:12px 24px 60px #43483720,0 1px 3px #44452b18;padding:28px 30px 18px;opacity:0;will-change:transform,opacity;pointer-events:none;transform-origin:center bottom}
+.hero-passport-preview::after{content:'';position:absolute;top:12px;right:-9px;bottom:-9px;left:0;border:1px solid var(--cf-line);z-index:-1;background:url('assets/textures/ivory-paper.webp') center/620px;opacity:.2}
+.preview-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.preview-top .eyebrow{font-size:8px}.preview-top .cf-badge{font-size:7px}
+.hero-passport-preview h3{font-size:29px;line-height:1.2;margin:22px 0 18px}
+.preview-owner{display:flex;align-items:center;gap:8px;font-size:9px;color:var(--cf-muted);padding-bottom:18px}
+.preview-owner .icon{width:14px;height:14px}.preview-owner>span{margin-left:auto}
+.preview-evidence>div{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid var(--cf-line);padding:15px 0;font-size:11px}
+.preview-evidence small,.preview-gate small{display:block;font-size:8px;color:var(--cf-muted);margin-top:5px}
+.preview-evidence b{font-weight:400;font-size:10px}
+.preview-gate{display:flex;gap:12px;align-items:center;background:var(--cf-vellum);padding:15px 12px;font-size:11px;margin-top:5px}.preview-gate>.icon{width:16px;height:16px;color:var(--cf-olive)}
+.preview-gate>.eyebrow{font-size:7px;margin-left:auto}
+.preview-bottom{display:flex;justify-content:space-between;font-size:7px;color:var(--cf-muted);letter-spacing:.06em;padding-top:18px}
+.hero-foot{position:relative;gap:20px;height:66px}.hero-foot>span:nth-child(3){font-size:9px;margin-left:auto}
+.cinema-chapter{min-width:205px}.cinema-track{height:1px;background:var(--cf-line);width:100px;overflow:hidden}.cinema-track span{display:block;height:100%;background:var(--cf-brass);transform:scaleX(0);transform-origin:left}
+.passport-section{position:relative;border-top:0;padding-top:60px}
+.passport-section .section-head{margin-bottom:32px}
+.passport-mount{transform-origin:center top;will-change:transform}
+.passport-filing{display:flex;justify-content:flex-end;gap:2px;margin:0 16px -1px 0;font-size:9px;color:var(--cf-olive)}
+.passport-filing span{padding:9px 18px;border:1px solid var(--cf-line);border-bottom:0;background:var(--cf-vellum);border-radius:4px 4px 0 0}.passport-filing span:first-child{background:var(--cf-olive);color:var(--cf-paper)}
+/* Touch layouts keep their native document flow and a shorter travel distance. */
+@media(min-width:1500px){.hero{padding-top:75px}.hero-object{width:720px;left:-10px}.hero-art{height:700px}.hero-passport-preview{top:110px}.evidence-ticket{top:470px}}
+@media(min-width:801px) and (max-width:1100px){.hero{padding-top:45px}.hero-copy h1{font-size:40px}.hero-art{overflow:visible;margin-left:-20px;height:550px}.hero-object{width:550px;left:-30px}.record-index{left:5px;right:0}.art-registration{left:5px}.art-notes{top:110px;gap:32px;width:112px}.evidence-ticket{top:375px;left:0;max-width:170px;padding:12px;gap:8px}.hero-passport-preview{left:10px;right:0;top:65px;padding:22px 20px 16px}.hero-passport-preview h3{font-size:27px}.hero-ledger{gap:12px}.cinema-track{display:none}.hero-foot{gap:15px}.hero-foot>span:nth-child(3){max-width:290px}}
+@media(max-width:800px),(max-height:700px){.hero-sequence{min-height:0}.hero{position:relative;top:auto;height:auto;min-height:0;max-height:none;padding-top:36px}.hero-passport-preview{display:none}.cinema-track{display:none}.hero-foot>span:nth-child(3){margin:0;order:3;width:100%;max-width:none;font-size:9px}.hero-object{opacity:1!important}.hero-art{overflow:hidden}.ambient-vellum{width:900px;opacity:.12}.ambient-one{top:100px;right:-480px}.ambient-two{left:-550px;bottom:-220px}.passport-section{padding-top:45px}}
+@media(max-width:800px){.hero-copy h1{font-size:36px}.hero-art{margin:30px auto 0;height:570px;width:100%;max-width:620px}.hero-object{width:550px;max-width:none;left:calc(50% - 275px);top:40px}.record-index{left:0;right:0;top:0}.art-registration{top:55px;left:2px;right:2px;bottom:20px}.art-notes{top:130px;right:4px;width:125px;gap:36px}.evidence-ticket{top:400px;left:12px;padding:12px 15px;max-width:190px}.art-watermark{bottom:12px;right:0}.hero-ledger{max-width:400px;margin-top:26px;gap:16px}.hero-ledger>span{font-size:9px}.hero-foot{min-height:80px;flex-wrap:wrap}.hero-copy .lead{font-size:16px}.layer-scene{--spread:.45}.layer-one{transform:translateY(calc(90px - var(--spread)*70px))}.layer-two{transform:translateY(calc(80px - var(--spread)*140px))}.layer-three{transform:translateY(calc(70px - var(--spread)*210px))}.passport-filing span{padding:8px 12px}}
+@media(max-width:520px){.hero-copy h1{font-size:33px;line-height:1.15;max-width:350px}.hero-art{height:425px;margin-top:30px}.hero-object{width:390px;left:calc(50% - 195px);top:42px}.art-notes{top:100px;right:1px;width:105px;gap:24px}.art-notes b{font-size:9px}.evidence-ticket{top:300px;left:5px;max-width:172px;padding:10px;gap:8px}.evidence-ticket strong{font-size:16px}.evidence-ticket small{font-size:8px}.evidence-ticket span{font-size:7px}.record-index{font-size:7px}.art-registration{bottom:35px}.hero-ledger{margin-top:25px;padding-top:14px}.hero-ledger b{font-size:18px}.hero-ledger>span{font-size:8px}.passport-filing{margin-right:5px}.passport-filing span{font-size:8px;padding:8px 9px}.preview-marker{font-size:7px;right:10px;bottom:8px}}
+@media(max-width:360px){.hero-copy h1{font-size:31px}.hero-art{height:385px}.hero-object{width:320px;left:calc(50% - 160px);top:52px}.art-notes{top:105px;width:95px;gap:19px}.evidence-ticket{top:276px;max-width:155px}.hero-foot>span:first-child{font-size:8px;min-width:0}}
+[data-reduced=true] .hero-sequence{min-height:0}[data-reduced=true] .hero{position:relative;top:auto;height:auto;min-height:0;padding-bottom:0}[data-reduced=true] .hero-art{margin-bottom:25px}[data-reduced=true] .hero-passport-preview{display:none}[data-reduced=true] .passport-mount,[data-reduced=true] .art-notes,[data-reduced=true] .evidence-ticket{transform:none!important}[data-reduced=true] .cinema-track{display:none}[data-reduced=true] .ambient-vellum{will-change:auto}
+@media(prefers-reduced-motion:reduce){.hero-sequence{min-height:0}.hero{position:relative;top:auto;height:auto}.hero-passport-preview{display:none}.passport-mount,.art-notes,.evidence-ticket{transform:none!important}}
+@media print{.hero-sequence{min-height:0}.hero{position:relative;top:auto;height:auto}.hero-passport-preview,.ambient-scene,.cinema-track{display:none}.passport-mount{transform:none!important}.hero-object,.art-notes,.evidence-ticket{opacity:1!important;transform:none!important}}
+/* Leave a quiet bottom margin for the persistent concept label. */
+@media(min-width:801px){.hero-foot{height:96px;padding-bottom:30px}}
+@media(min-width:801px) and (max-width:1100px){.hero-art{margin-right:0}}
+@media(min-width:801px){.hero-foot .quiet-control{order:2}.hero-foot>span:nth-child(3){order:3}}

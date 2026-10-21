@@ -1,0 +1,98 @@
+[
+  {
+    "page": "index",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "product",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-desk",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-review",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-proof",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-signal",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-report",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "use-cases",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "about",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "pricing",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "governance",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "contact",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "signin",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "privacy",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "terms",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "404",
+    "footerTexture": true,
+    "scrollWidth": 390,
+    "width": 390
+  }
+]

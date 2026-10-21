@@ -1,0 +1,36 @@
+/* Film is an opening layer. On completion its final cloth frame reveals the real hero. */
+html.intro-playing,html.intro-pending{overflow:hidden;scrollbar-gutter:stable}
+html.intro-pending:not(.intro-playing)::before{content:"";position:fixed;inset:0;z-index:9998;background:#435033 linear-gradient(#26392366,#26392366);background-image:linear-gradient(#26392366,#26392366),url('assets/textures/olive-bookcloth.webp');background-size:auto,620px}
+#cf-intro{position:fixed;inset:0;z-index:10000;opacity:var(--intro-film,1);background:#435033}
+#cf-intro[data-state=ending]{opacity:0;pointer-events:none}
+#cf-intro.intro-skipped{transition:opacity 700ms ease-in-out}
+.intro-screen{width:100%;height:100%;position:relative;overflow:hidden}
+.intro-controls{position:absolute;left:max(24px,4vw);right:max(24px,4vw);bottom:max(26px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;color:#faf8ef;gap:20px;z-index:2;opacity:var(--intro-controls,1)}
+.intro-name{font:450 10px/1.5 var(--cf-font-ui);letter-spacing:.18em;text-shadow:0 2px 12px #142513}
+.intro-controls>div{display:flex;gap:12px}
+.intro-controls button{font:450 12px/1.4 var(--cf-font-ui);color:#faf8ef;border:1px solid #f5f1e844;border-radius:3px;background:#193a2e6e;backdrop-filter:blur(12px);padding:10px 16px;min-height:44px;cursor:pointer}
+.intro-controls button:hover{background:#193a2eaa;border-color:#faf8ef99}
+.intro-controls button:focus-visible{outline:2px solid #faf8ef;outline-offset:4px}
+.intro-controls button span{margin-left:10px}
+.intro-progress{position:absolute;bottom:0;left:0;right:0;height:2px;background:#b9a67a;transform-origin:left}
+#cf-intro[data-state=ending] .intro-controls,#cf-intro[data-state=ending] .intro-progress{opacity:0}
+.intro-pending .site-header{opacity:0}
+.intro-revealing .site-header{animation:intro-nav-reveal .85s ease-in-out both}
+@keyframes intro-nav-reveal{from{opacity:0}to{opacity:1}}
+.intro-replay{white-space:nowrap}
+@media(max-width:520px){.intro-controls{left:20px;right:20px;bottom:24px}.intro-controls>div{gap:8px}.intro-controls button{padding:10px 12px;font-size:11px}.intro-name{font-size:8px;max-width:90px;line-height:1.7}}
+@media(prefers-reduced-motion:reduce){#cf-intro{display:none}.intro-replay{display:none}.intro-revealing .site-header{animation:none}}
+@media print{#cf-intro,.intro-replay{display:none}}
+
+.hero h1[tabindex="-1"]:focus{outline:none}
+
+.hero-foot{height:auto;min-height:66px}.intro-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.hero-foot .intro-actions .quiet-control{order:initial}@media(max-width:800px){.hero-foot{height:auto;min-height:96px;padding-bottom:20px}.intro-actions{order:2;gap:12px;margin-left:auto}}
+
+/* The live hero emerges on the same frame clock as the concluding weave shot. */
+.intro-playing body::before{opacity:1;background-color:#435033;background-image:linear-gradient(#26392366,#26392366),url('assets/textures/olive-bookcloth.webp');background-size:auto,620px;background-position:0 var(--intro-cloth-origin,0px)}
+.intro-playing .hero-art{opacity:var(--intro-art,0)}
+.intro-playing .hero-copy{opacity:var(--intro-copy,0);translate:0 calc((1 - var(--intro-copy,0))*12px)}
+.intro-playing .hero-foot,.intro-playing .preview-marker{opacity:var(--intro-detail,0)}
+.intro-playing .hero-copy,.intro-playing .hero-art,.intro-playing .hero-foot{will-change:opacity}
+.intro-skipping .hero-copy,.intro-skipping .hero-art,.intro-skipping .hero-foot,.intro-skipping .preview-marker{opacity:1;translate:none;transition:opacity .7s ease-in-out}
+.intro-playing .ambient-scene{visibility:hidden}

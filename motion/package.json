@@ -1,0 +1,41 @@
+{
+  "name": "clinicianfile-intro",
+  "version": "1.0.0",
+  "description": "ClinicianFile \u2014 A Record, Woven. Remotion intro and website handoff.",
+  "repository": {},
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.537",
+    "@remotion/player": "^4.0.537",
+    "@remotion/transitions": "^4.0.537",
+    "esbuild": "^0.28.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.537"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.537",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc",
+    "preview": "remotion studio --no-open --port=4180",
+    "build:player": "node build-player.mjs",
+    "check": "tsc --noEmit"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}

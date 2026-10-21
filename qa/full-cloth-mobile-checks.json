@@ -1,0 +1,82 @@
+[
+  {
+    "page": "index",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "product",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-desk",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-review",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-proof",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-signal",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-report",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "use-cases",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "about",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "pricing",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "governance",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "contact",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "signin",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "privacy",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "terms",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "404",
+    "scrollWidth": 390,
+    "width": 390
+  }
+]

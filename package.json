@@ -1,0 +1,12 @@
+{
+  "name": "clinicianfile-concept-preview",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ClinicianFile synthetic website and credential-passport workbench",
+  "scripts": {
+    "dev": "python3 serve.py",
+    "test": "node --test tests/workbench-model.test.mjs",
+    "check": "python3 tools/verify-site.py"
+  }
+}

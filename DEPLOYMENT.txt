@@ -1,0 +1,25 @@
+CLINICIANFILE — HOSTINGER DEPLOYMENT
+
+1. Sign into the Hostinger account that owns clinicianfile.com. Confirm you have a Web Hosting plan: a domain purchase alone is not website hosting.
+2. In hPanel, Websites > Add/Create website > Custom PHP/HTML website > Empty website. Choose clinicianfile.com. If the domain already has a website, use that website's Dashboard and back it up before replacing files.
+3. Open Dashboard > File Manager > public_html for this domain.
+4. Upload ClinicianFile-Hostinger-Upload.zip and Extract. The ZIP contains files directly at its root. Confirm public_html/index.html and public_html/assets/ exist, not public_html/ClinicianFile-Hostinger-Upload/index.html. Move files up if the extraction interface created a wrapper directory. Remove only the default placeholder (such as default.php) or a conflicting old index after backup. Delete the uploaded ZIP after extraction.
+5. Check the domain connection in hPanel. Same-account domains usually connect automatically. If not, follow this site's Connect domain / Check guide using its exact DNS values. Preserve existing MX, SPF, DKIM and DMARC email records. Do not guess hosting IPs or nameservers.
+6. Once connected, open Security > SSL. Install/activate SSL if needed and enable Force HTTPS. Allow DNS changes to propagate if applicable.
+7. Test https://clinicianfile.com/ and https://clinicianfile.com/product.html, signin.html, contact.html and demo.html. Test intro playback, skip/replay, mobile menu, and a nonexistent URL for the custom 404. The .htaccess file provides DirectoryIndex and ErrorDocument on supported hosting; if your plan disables .htaccess, use the dashboard Error Pages setting.
+8. Purge Hostinger cache if the old page is still shown, then hard-refresh.
+
+UPDATES
+A GitHub push does not automatically update a manual File Manager upload. Repeat the upload process for later releases, or configure Hostinger's Git integration if available on your plan. Repository: https://github.com/PrajaktaAdlytica/clinician-file-site.git ; branch: main. The root includes ready-to-serve static files. Generic static Git deployment does not need a build. The upload ZIP intentionally excludes development source and tooling; it preserves the site and its design handoff pages/assets.
+
+STATUS
+The site is a concept preview. Authentication and form delivery are not connected. No payment, real provider records or live portal access. Search indexing remains disabled. GitHub push and hosting do not activate these services. No Hostinger deployment has been performed or verified by this handoff.
+
+OFFICIAL HOSTINGER REFERENCES (researched 21 October 2026)
+https://www.hostinger.com/support/1583214-how-to-add-a-website-in-hostinger/
+https://www.hostinger.com/tutorials/making-website-with-html/
+https://www.hostinger.com/support/how-to-upload-a-website-from-backups/
+https://www.hostinger.com/support/1863967-how-to-point-a-domain-to-hostinger/
+https://docs.hostinger.com/websites/ssl
+https://docs.hostinger.com/websites/error-pages
+https://www.hostinger.com/support/1583302-how-to-deploy-a-git-repository-in-hostinger/

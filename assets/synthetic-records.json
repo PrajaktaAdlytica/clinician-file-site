@@ -1,0 +1,76 @@
+{
+  "disclosure": "DEMO \u2014 SYNTHETIC DATA. No real records or portal state.",
+  "anchorDate": "2026-10-20",
+  "records": [
+    {
+      "id": "SYN-029",
+      "kind": "blocked",
+      "owner": "Reviewer A",
+      "next": "Obtain consent",
+      "state": "Blocked"
+    },
+    {
+      "id": "SYN-030",
+      "kind": "clean",
+      "owner": "Reviewer B",
+      "next": "Human handoff",
+      "state": "Ready for review"
+    },
+    {
+      "id": "SYN-031",
+      "kind": "review",
+      "owner": "Reviewer A",
+      "next": "Resolve source conflict",
+      "state": "Review needed"
+    },
+    {
+      "id": "SYN-032",
+      "kind": "clean",
+      "owner": "Reviewer C",
+      "next": "Human handoff",
+      "state": "Ready for review"
+    },
+    {
+      "id": "SYN-033",
+      "kind": "blocked",
+      "owner": "Reviewer B",
+      "next": "Confirm source access",
+      "state": "Abstained"
+    },
+    {
+      "id": "SYN-034",
+      "kind": "review",
+      "owner": "Reviewer C",
+      "next": "Refresh stale evidence",
+      "state": "Review needed"
+    },
+    {
+      "id": "SYN-035",
+      "kind": "clean",
+      "owner": "Reviewer A",
+      "next": "Human handoff",
+      "state": "Ready for review"
+    },
+    {
+      "id": "SYN-036",
+      "kind": "blocked",
+      "owner": "Reviewer C",
+      "next": "Obtain consent",
+      "state": "Blocked"
+    },
+    {
+      "id": "SYN-037",
+      "kind": "review",
+      "owner": "Reviewer B",
+      "next": "Review missing document",
+      "state": "Review needed"
+    },
+    {
+      "id": "SYN-038",
+      "kind": "clean",
+      "owner": "Reviewer B",
+      "next": "Human handoff",
+      "state": "Ready for review"
+    }
+  ]
+}

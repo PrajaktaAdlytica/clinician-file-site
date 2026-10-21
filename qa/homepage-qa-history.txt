@@ -1,0 +1,94 @@
+# ClinicianFile homepage design — QA
+
+final result: passed
+
+## Cinematic update — 20 October 2026
+
+- Scope: approved hero asset, native-scroll paper reveal into an HTML passport summary, following interactive passport entrance, brighter continuous canvas and additional record/reviewer details.
+- All 142 copied brand files remain byte-identical. Fonts, logo, illustration, original textures, icons and semantic status tokens are unchanged. Composition and the requested canvas brightness are deliberately refined.
+- Desktop: observed original artwork at scroll 0, partial paper reveal at scroll 300, full passport at scroll 540, and restoration to opacity 1 / identity transform after upward scrolling to 0.
+- Desktop and touch layout checks: 1440, 1024, 768, 390 and 320 CSS-pixel widths, zero page-level horizontal overflow. Touch layouts use native unpinned scrolling. Reduced-motion control verified: still hero, hidden decorative duplicate, no entrance transforms; interactive passport remains available.
+- Scenario regression: selecting the ambiguous case updates SYN-031, conflicting board evidence, on-hold enrollment and reviewer-owned next action. No changes to data from scroll.
+- Rendering: local fonts/assets, passive scroll listener, cached geometry updated after resize/content expansion, time-based requestAnimationFrame damping, no idle loop. No new library or network dependency.
+- Visual iteration: replaced a double-exposure crossfade with an opaque paper wipe so the emerging evidence remains legible. Retained small type and the full approved illustration proportions.
+- Current evidence: `qa/cinematic-hero-desktop.png`, `qa/cinematic-midpoint.png`, `qa/cinematic-passport-desktop.png`, `qa/cinematic-mobile-hero.png`, `qa/cinematic-mobile-art.png`, `qa/cinematic-mobile-passport.png`, `qa/cinematic-mobile-320.png`, `qa/cinematic-tablet.png`, `qa/cinematic-reduced-motion.png`.
+- All twelve chapter captures refreshed; full brief and all five offers retained. Passport is now chapter 02; problem narrative is chapter 03.
+- Compact 1024px desktop overflow fixed by containing the art frame; motion control moved away from the persistent preview badge. 1440×650 short-screen layout uses unpinned flow and has zero overflow.
+- No browser console errors observed. JavaScript syntax and local references checked. Physical iOS/Android devices were not tested; responsive checks use the browser viewport. No video file or production deployment is claimed.
+
+## Earlier homepage QA (retained history)
+
+Scope: responsive homepage design prototype, twelve-chapter scroll storyboard, full brief mapping and handoff appendix. This is not a production launch or a completed video production.
+
+## Visual truth and comparison
+
+- Selected direction: `references/approved-suspended-record.png` (1003 × 1568 pixels).
+- Selected logo: `references/approved-source-stitch.png`; approved vector masters are reused from the completed brand kit.
+- Editorial system: `references/typography-and-palette-reference.png`; fonts, colors, spacing, control styles and material assets come from the kit.
+- Rendered hero: `qa/01-hero.png` (1440 × 1000 CSS-pixel capture, density 1).
+- Same-input source/implementation comparison: `qa/reference-comparison.png`. The source hero region and full rendered hero are shown side by side with their aspect ratios preserved. The source is a tall visual concept, while the requested homepage uses a wider desktop composition and smaller typography. This is a direction/asset comparison, not a claim of pixel-identical layout.
+- Focused source/render comparison: `qa/logo-focused-comparison.png`, normalized to the same 144px logo display width and enlarged 3× for inspection. SVG browser antialiasing differs slightly from the raster master; proportions and lettering remain unchanged.
+- Full composition evidence: `qa/desktop-contact-sheet.png` and `qa/homepage-full-desktop.png`.
+- Focused product evidence: `qa/passport-16x9.png` (1440 × 810), `qa/case-review.png`, `qa/mobile-evidence.png`, `qa/reviewer-queue.png`, `qa/audit-report.png`.
+- Mobile evidence: `qa/mobile-hero.png`, `qa/mobile-passport.png`, `qa/mobile-inquiry.png` (390 × 844).
+- Tablet evidence: `qa/tablet-passport.png` (768 × 1024).
+
+The selected Source Stitch identity supersedes the earlier placeholder mark in the visual-direction image. All 142 copied brand assets/tokens were byte-compared against the approved kit and are unchanged. The kit's scene artwork was already a matched recreation; this handoff does not claim that it is an extraction of the earlier concept image.
+
+## Required fidelity surfaces
+
+1. **Typography:** local Source Serif 4 and Inter loaded in-browser. Desktop hero 46px; 390px hero 33px; headings use restrained 450 weight. Body/UI hierarchy uses the existing kit. Mobile inputs are 16px. No logo retyping or replacement font was introduced.
+2. **Spacing and layout:** 1200px content width, 20px mobile gutters, 88px desktop / 56px mobile section padding. The hero retains the suspended record on the right and editorial copy on the left. Every chapter uses the continuous ivory canvas. Tables scroll within their container rather than widening the page.
+3. **Colors/tokens:** approved forest, ivory, paper, olive, brass and semantic status colors retained. The requested background enrichment adds a warm daylight wash over #FAF8F2 and the existing material textures; no blue theme or alternating dark sections. Body/status/focus color pairs inherit the brand kit's verified contrast values; no comprehensive accessibility certification is implied.
+4. **Image quality:** exact supplied WebP/PNG material assets, original logo SVGs and licensed Phosphor icons. Hero uses contain-style proportions, not a crop. The motion sequence uses the supplied vellum and cover planes, not CSS-drawn illustration substitutes. Mobile layers remain contained.
+5. **Copy/content:** all five exact offers in original order; explicit operator/buyer split; three synthetic cases; credentialing/privileging/enrollment separation; test pricing; unachieved pilot gates; primary metric and guardrails; stop rule; source-access and compliance limitations. Internal research/campaign/tracking requirements are retained in `brief-coverage.html`.
+
+## Findings and iteration history
+
+- **[P2, fixed] Scene caption overlapped the dossier cover.** Initial desktop assembly screenshot placed the cover across the caption rule. Increased the desktop scene frame to 640px, repositioned the planes, and expanded mobile frame space. Post-fix evidence: `qa/04-mechanism.png`, `qa/motion-midpoint.png`, `qa/motion-gathered.png`.
+- **[P2, fixed] Mobile grid intrinsic sizing created 130px page overflow at 390px.** Evidence table and the fixed-width scene expanded auto-minimum grid tracks. Used `minmax(0,1fr)` and explicit zero minimum widths; retained the local table scroller. Post-fix evidence: mobile captures and in-browser zero-overflow measurement.
+- **[P2, fixed] Narrow 320px hero extended 5px beyond the viewport.** Reduced only the narrow-screen image width and centered it. Browser retest reports zero horizontal overflow at 320px.
+- **[P2, fixed] A scrolled product detail could lose its synthetic label.** Added a persistent, unobtrusive concept/synthetic marker while retaining in-frame product labels. Post-fix evidence: `qa/mobile-evidence.png`, `qa/passport-16x9.png`.
+- **[P2, fixed] Desktop motion steps were too faint before activation.** Kept all reading copy at full opacity and used a restrained active rule/title color instead.
+- **[P3, fixed] Escape closed the mobile menu without resetting its accessible name.** Reset both expanded state and label.
+
+No actionable P0/P1/P2 issue remains within the reviewed design-prototype scope.
+
+## Functional browser checks
+
+- Desktop 1440 × 1000; tablet 768 × 1024; mobile 390 × 844; narrow 320 × 740: no page horizontal overflow after corrections.
+- Short desktop 1440 × 600: assembly pinning falls back to ordinary document flow.
+- Desktop scroll keyframes: spread approximately 1 → 0.61 → 0.26; reverse scroll restored approximately 1 and the first narrative step. Captured midpoint and gathered states.
+- Reduced-motion control: static assembly, all steps visible, normal scrolling, no hero transform. System preference is also handled in code; OS preference was not changed during testing.
+- Scenario tabs: blocked → conflicting source → clean handoff; arrow-key navigation updates selection and state.
+- Source button opens the correct evidence reference and uncertainty text.
+- Human-handoff replay opens a separate synthetic timeline; terminal state is human submission pending, not payer approval.
+- Reviewer queue filter returns exactly 3 blocked/abstained records out of 10.
+- Product deep link opens Credential Report and exposes the synthetic CSV.
+- Mobile navigation opens, follows an anchor and closes.
+- Empty inquiry shows six required-field errors and focuses the first field. Fictional valid entries result in explicit local-only completion; no transmission or storage occurs.
+- No console errors were reported in final checks.
+- JavaScript syntax check passed. Local links and copied asset equality are recorded in `qa/static-checks.json`.
+
+## Capture method
+
+Storyboard captures use the `?capture=1` review setting, which disables smooth anchor travel and entrance transition offsets so the frames show settled compositions. It does not replace content, hide controls, remove disclosures, or disable the scroll assembly. Interactive tests also exercise the actual controls. The normal user preview omits this setting.
+
+## Open questions and residual limits
+
+- No unresolved design choice blocks this deliverable.
+- The original `healthcare.md` section 29 was not supplied. Exact source-file citation matching cannot be claimed; the supplied five offers are preserved and official workflow sources were researched separately.
+- This is a static-source local design prototype. There is no backend, authentication, live form delivery, tracking, portal/API access, payment or deployment.
+- The storyboard specifies a future cinematic video loop; no video file or physically accurate 3D model is delivered.
+- The first synthetic demonstration is intentionally read-only. Selecting cases is view state, not a credentialing decision.
+- Screen-reader, cross-browser, real-device performance and production security testing remain separate implementation work.
+
+## Implementation checklist
+
+- [x] Preserve selected identity, assets and tokens.
+- [x] Complete homepage and original five modules.
+- [x] Preserve all brief requirements in homepage or coverage appendix.
+- [x] Capture twelve chapters plus focused product and mobile evidence.
+- [x] Verify motion reversal, reduced motion, local form, navigation and demo cases.
+- [x] Correct responsive overflow and visible layout issues.
+- [x] Package source and handoff files without deployment.

@@ -1,0 +1,227 @@
+[
+  {
+    "page": "product",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 5,
+    "width": 1440
+  },
+  {
+    "page": "credential-desk",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "credential-review",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "credential-proof",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "credential-signal",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "credential-report",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "use-cases",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 3,
+    "width": 1440
+  },
+  {
+    "page": "about",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "pricing",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "governance",
+    "size": "desktop",
+    "missingImages": 1,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "contact",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "signin",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "privacy",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "terms",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "404",
+    "size": "desktop",
+    "missingImages": 0,
+    "scrollWidth": 1440,
+    "visuals": 1,
+    "width": 1440
+  },
+  {
+    "page": "product",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-desk",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-review",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-proof",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-signal",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "credential-report",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "use-cases",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "about",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "pricing",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "governance",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "contact",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "signin",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "privacy",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "terms",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "page": "404",
+    "size": "mobile",
+    "brokenVisibleImages": [],
+    "scrollWidth": 390,
+    "width": 390
+  }
+]

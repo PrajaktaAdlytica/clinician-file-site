@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createRecord,applyAction,undoAction,canHandoff,exceptions,enrollment,auditCSV} from '../workbench-model.js';
+const data=JSON.parse(await readFile(new URL('../assets/synthetic-records.json',import.meta.url)));
+const record=id=>createRecord(data.records.find(r=>r.id===id));
+const action={type:'handoff',owner:'Reviewer B',note:'Synthetic evidence reviewed by the assigned specialist.'};
+test('original 10 records and case mix stay consistent',()=>{assert.equal(data.records.length,10);assert.equal(data.records.filter(r=>r.kind==='blocked').length,3);assert.equal(data.records.filter(r=>r.kind==='review').length,3);assert.equal(data.records.filter(r=>r.kind==='clean').length,4);});
+test('consent, conflict and unavailable source prevent handoff',()=>{for(const id of ['SYN-029','SYN-031','SYN-033','SYN-037']){assert.equal(canHandoff(record(id)),false);assert.throws(()=>applyAction(record(id),action),/Resolve consent/);}});
+test('reassignment preserves blocked submission and audit provenance',()=>{const r=applyAction(record('SYN-029'),{...action,type:'assign'});assert.equal(r.owner,'Reviewer B');assert.equal(r.kind,'blocked');assert.equal(r.submission,'Unsent');assert.equal(exceptions(r).length,2);assert.equal(r.events.length,3);assert.equal(record('SYN-029').owner,'Reviewer A');});
+test('synthetic replay resolves only simulated source gates, never approves enrollment',()=>{const r=applyAction(record('SYN-029'),{...action,type:'replay'});assert.equal(canHandoff(r),true);assert.equal(exceptions(r).length,0);assert.equal(enrollment(r),'Human submission pending');assert.equal(r.submission,'Unsent');assert.ok(r.sources[2].checked.startsWith('2026-10-21'));assert.throws(()=>applyAction(record('SYN-031'),{...action,type:'replay'}));});
+test('undo restores data while retaining a dated reversal',()=>{const r=applyAction(record('SYN-029'),{...action,type:'replay'}),u=undoAction(r);assert.equal(u.consent,false);assert.equal(u.kind,'blocked');assert.equal(exceptions(u).length,2);assert.equal(u.events.length,4);assert.equal(u.events.at(-1).action,'Local action reversed');assert.ok(Date.parse(u.events.at(-1).at)>Date.parse(u.events.at(-2).at));});
+test('clean handoff remains human-owned and unsent',()=>{const r=applyAction(record('SYN-030'),action);assert.equal(r.handoff,true);assert.equal(r.state,'Handoff recorded');assert.equal(r.submission,'Unsent');assert.equal(enrollment(r),'Human submission pending');});
+test('invalid owner and short reason are rejected',()=>{assert.throws(()=>applyAction(record('SYN-030'),{...action,owner:'Unknown'}));assert.throws(()=>applyAction(record('SYN-030'),{...action,note:'short'}));});
+test('audit export labels synthetic evidence and escapes formula cells',()=>{const r=applyAction(record('SYN-030'),{...action,note:'=HYPERLINK("example.invalid")'});const csv=auditCSV([r]);assert.match(csv,/DEMO — SYNTHETIC DATA/);assert.ok(csv.includes('"\'=HYPERLINK'));assert.match(csv,/Unsent/);});
